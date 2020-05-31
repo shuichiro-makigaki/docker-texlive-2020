@@ -6,5 +6,5 @@ RUN dnf -y install git gpg perl perl-Getopt-Long perl-Digest-MD5 perl-Log-Log4pe
     cd install-tl && \
     echo "selected_scheme scheme-full" > profile && \
     ./install-tl -profile profile
-ENV PATH /usr/local/texlive/2019/bin/x86_64-linux:$PATH
+ENV PATH /usr/local/texlive/2020/bin/x86_64-linux:$PATH
 CMD ["tlmgr", "--version"]
