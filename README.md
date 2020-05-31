@@ -15,8 +15,6 @@ $ docker run --rm -i -t makisyu/texlive-2020 platex
 Most users want to add a volume that contains source codes and change working directory to it.
 
 ```
-$ ls
-main.tex
 $ docker run --rm --volume $PWD:/workdir --workdir /workdir makisyu/texlive-2020 platex main.tex
 ```
 
@@ -40,7 +38,6 @@ This image is based on `fedora:latest` docker image. The login shell and other b
 
 ```
 $ docker run -i -t --rm --volume $PWD:/workdir --workdir /workdir --user 1001:1001 makisyu/texlive-2020 /usr/bin/bash
-[root@20629bec6417 workdir]# ls
 [root@20629bec6417 workdir]# perl -v
 [root@20629bec6417 workdir]# python3 -V
 ```
